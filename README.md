@@ -1,4 +1,4 @@
-#Website to invite guest to Sarah and Mathias' wedding, created on Ract.js with Material-ui for visual components
+# Website to invite guest to Sarah and Mathias' wedding, created on Ract.js with Material-ui for visual components
 
 # Getting Started with Create React App
 
