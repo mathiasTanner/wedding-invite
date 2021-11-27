@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({}));
 
-const HomePage = (props) => {
+const Header = (props) => {
   const classes = useStyles();
 
   return;
 };
 
-export default HomePage;
+export default Header;
 
-HomePage.propTypes = {};
+Header.propTypes = {};
