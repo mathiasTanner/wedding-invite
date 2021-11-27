@@ -10,7 +10,25 @@ import Footer from "./components/visual-components/Footer";
 import languageState from "./atoms/language";
 import inviteListState from "./atoms/inviteList";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  app: {
+    display: "inline-block",
+  },
+  header: {},
+  body: {
+    marginBottom: "6vh",
+    [theme.breakpoints.up("xs")]: {
+      marginTop: "9vh",
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      marginTop: "12vh",
+    },
+    backgroundColor: `${theme.palette.secondary.main} `,
+    margin: "auto",
+  },
+  footer: {},
+}));
 
 function App() {
   const classes = useStyles();
@@ -52,6 +70,7 @@ function App() {
       direction="column"
       justifyContent="space-evenly"
       alignItems="stretch"
+      className={classes.app}
     >
       {isLoading.languageLoaded && isLoading.inviteListLoaded ? (
         <span>
