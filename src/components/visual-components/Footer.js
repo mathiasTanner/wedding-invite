@@ -1,22 +1,43 @@
 import React from "react";
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from "recoil";
+import { useRecoilState } from "recoil";
 import { makeStyles } from "@material-ui/core/styles";
-import languageState from "../../atoms/language";
+import selectedLanguageState from "../../atoms/selectedLanguage";
 import PropTypes from "prop-types";
+import { AppBar, Typography, Hidden } from "@material-ui/core";
+import * as english from "../../assets/languages/EN.json";
+import * as french from "../../assets/languages/FR.json";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    top: "auto",
+    bottom: 0,
+    backgroundColor: `${theme.palette.primary.main}`,
+    textAlign: "center",
+  },
+}));
 
 const Footer = (props) => {
   const classes = useStyles();
-  const [languages, setLanguages] = useRecoilState(languageState);
+  const [language, setLanguage] = useRecoilState(selectedLanguageState);
 
-  return <p>{languages !== undefined ? languages[0].code : "footer area"}</p>;
+  return (
+    <AppBar position="fixed" className={classes.appBar}>
+      <Hidden smDown>
+        <Typography variant="body1">
+          {language.code === "EN"
+            ? english.FOOTER.message
+            : french.FOOTER.message}
+        </Typography>
+      </Hidden>
+      <Hidden mdUp>
+        <Typography variant="caption">
+          {language.code === "EN"
+            ? english.FOOTER.message
+            : french.FOOTER.message}
+        </Typography>
+      </Hidden>
+    </AppBar>
+  );
 };
 
 export default Footer;

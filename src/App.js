@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import Grid from "@material-ui/core/Grid";
 import { useRecoilState } from "recoil";
 import { makeStyles } from "@material-ui/core/styles";
 import { db } from "./firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 import Header from "./components/visual-components/Header";
 import Footer from "./components/visual-components/Footer";
+import bodyBackground from "./assets/images/body_background.jpg";
 import languageState from "./atoms/language";
 import inviteListState from "./atoms/inviteList";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   app: {
     display: "inline-block",
+    backgroundImage: `url(${bodyBackground})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    height: "100vh",
+    width: "100hw",
+    borderRadius: 8,
+    display: "flex",
   },
   header: {},
   body: {
@@ -24,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       marginTop: "12vh",
     },
-    backgroundColor: `${theme.palette.secondary.main} `,
     margin: "auto",
   },
   footer: {},
@@ -41,7 +49,6 @@ function App() {
 
   const fetchLanguages = () => {
     onSnapshot(collection(db, "language"), (snapshot) => {
-      console.log(snapshot.docs.map((doc) => doc.data()));
       setLanguages(snapshot.docs.map((doc) => doc.data()));
       setIsLoading({ ...isLoading, languageLoaded: true });
     });
@@ -49,7 +56,6 @@ function App() {
 
   const fetchInviteList = () => {
     onSnapshot(collection(db, "inviteList"), (snapshot) => {
-      console.log(snapshot.docs.map((doc) => doc.data()));
       setInviteList(snapshot.docs.map((doc) => doc.data()));
       setIsLoading({ ...isLoading, inviteListLoaded: true });
     });
@@ -81,7 +87,7 @@ function App() {
             <p>body area</p>
           </Grid>
           <Grid item className={classes.footer}>
-            <p>footer area</p>
+            <Footer />
           </Grid>{" "}
         </span>
       ) : (
