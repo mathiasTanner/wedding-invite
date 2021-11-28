@@ -49,7 +49,6 @@ function App() {
 
   const fetchLanguages = () => {
     onSnapshot(collection(db, "language"), (snapshot) => {
-      console.log(snapshot.docs.map((doc) => doc.data()));
       setLanguages(snapshot.docs.map((doc) => doc.data()));
       setIsLoading({ ...isLoading, languageLoaded: true });
     });
@@ -57,7 +56,6 @@ function App() {
 
   const fetchInviteList = () => {
     onSnapshot(collection(db, "inviteList"), (snapshot) => {
-      console.log(snapshot.docs.map((doc) => doc.data()));
       setInviteList(snapshot.docs.map((doc) => doc.data()));
       setIsLoading({ ...isLoading, inviteListLoaded: true });
     });
