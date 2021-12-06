@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import React from "react";
+//import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import selectedLanguageState from "../../atoms/selectedLanguage";
 import * as english from "../../assets/languages/EN.json";
 import * as french from "../../assets/languages/FR.json";
@@ -19,9 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = (props) => {
   const classes = useStyles();
-  const [selectedLanguage, setSelectedLanguage] = useRecoilState(
-    selectedLanguageState
-  );
+  const selectedLanguage = useRecoilValue(selectedLanguageState);
 
   return (
     <AppBar>
@@ -50,4 +48,4 @@ const Header = (props) => {
 
 export default Header;
 
-Header.propTypes = {};
+//Header.propTypes = {};
