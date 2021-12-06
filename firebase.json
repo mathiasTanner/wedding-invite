@@ -5,7 +5,7 @@
   },
   "hosting": {
     "site": "sarahandmath",
-    "public": "public",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
