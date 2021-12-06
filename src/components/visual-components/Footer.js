@@ -1,8 +1,8 @@
 import React from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { makeStyles } from "@material-ui/core/styles";
 import selectedLanguageState from "../../atoms/selectedLanguage";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import { AppBar, Typography, Hidden } from "@material-ui/core";
 import * as english from "../../assets/languages/EN.json";
 import * as french from "../../assets/languages/FR.json";
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = (props) => {
   const classes = useStyles();
-  const [language, setLanguage] = useRecoilState(selectedLanguageState);
+  const language = useRecoilValue(selectedLanguageState);
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
@@ -42,4 +42,4 @@ const Footer = (props) => {
 
 export default Footer;
 
-Footer.propTypes = {};
+//Footer.propTypes = {};

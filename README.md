@@ -1,3 +1,5 @@
+# Website to invite guest to Sarah and Mathias' wedding, created on Ract.js with Material-ui for visual components
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

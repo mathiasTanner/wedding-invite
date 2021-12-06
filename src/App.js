@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import { useRecoilState } from "recoil";
 import { makeStyles } from "@material-ui/core/styles";
@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     width: "100hw",
     borderRadius: 8,
-    display: "flex",
   },
   header: {},
   body: {
@@ -42,26 +41,27 @@ function App() {
   const classes = useStyles();
   const [languages, setLanguages] = useRecoilState(languageState);
   const [inviteList, setInviteList] = useRecoilState(inviteListState);
-  const [isLoading, setIsLoading] = useState({
-    languageLoaded: false,
-    inviteListLoaded: false,
-  });
+  const [isLoading, setIsLoading] = useState(
+    {
+      languageLoaded: false,
+      inviteListLoaded: false,
+    },
+    []
+  );
 
-  const fetchLanguages = () => {
+  const fetchLanguages = useCallback(() => {
     onSnapshot(collection(db, "language"), (snapshot) => {
-      console.log(snapshot.docs.map((doc) => doc.data()));
       setLanguages(snapshot.docs.map((doc) => doc.data()));
       setIsLoading({ ...isLoading, languageLoaded: true });
     });
-  };
+  }, [isLoading, setLanguages]);
 
-  const fetchInviteList = () => {
+  const fetchInviteList = useCallback(() => {
     onSnapshot(collection(db, "inviteList"), (snapshot) => {
-      console.log(snapshot.docs.map((doc) => doc.data()));
       setInviteList(snapshot.docs.map((doc) => doc.data()));
       setIsLoading({ ...isLoading, inviteListLoaded: true });
     });
-  };
+  }, [isLoading, setInviteList]);
 
   useEffect(() => {
     if (languages === null) {
@@ -70,7 +70,7 @@ function App() {
     if (inviteList === null) {
       fetchInviteList();
     }
-  }, [languages, inviteList]);
+  }, [languages, inviteList, fetchInviteList, fetchLanguages]);
 
   return (
     <Grid
