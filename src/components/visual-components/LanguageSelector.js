@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import selectedLanguageState from "../../atoms/selectedLanguage";
 import languageState from "../../atoms/language";
 import * as english from "../../assets/languages/EN.json";
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 const LanguageSelector = (props) => {
   const classes = useStyles();
-  const [languages, setLanguages] = useRecoilState(languageState);
+  const languages = useRecoilValue(languageState);
   const [selectedLanguage, setSelectedLanguage] = useRecoilState(
     selectedLanguageState
   );
