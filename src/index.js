@@ -3,12 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import Theme from "./assets/theme/Theme";
+import { RecoilRoot } from "recoil";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MuiThemeProvider theme={Theme}>
-      <App />
-    </MuiThemeProvider>
+    <RecoilRoot>
+      <MuiThemeProvider theme={Theme}>
+        <App />
+      </MuiThemeProvider>
+    </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
 );
