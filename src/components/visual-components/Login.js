@@ -76,8 +76,8 @@ const Login = (props) => {
       setErrorHidden(true);
       for (let invited of inviteList) {
         if (
-          invited.first_name === formInput.first &&
-          invited.last_name === formInput.last
+          invited.first_name.toUpperCase() === formInput.first.toUpperCase() &&
+          invited.last_name.toUpperCase() === formInput.last.toUpperCase()
         ) {
           setErrorHidden(true);
           setWrongHidden(true);
