@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     color: `${theme.palette.secondary.contrastText} !important`,
   },
   cssOutlinedInput: {
+    backgroundColor: `${theme.palette.secondary.main}`,
     "&$cssFocused $notchedOutline": {
       borderColor: `${theme.palette.secondary.dark} !important`,
     },
