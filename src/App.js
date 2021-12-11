@@ -6,10 +6,12 @@ import { db } from "./firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 import Header from "./components/visual-components/Header";
 import Footer from "./components/visual-components/Footer";
+import HomePage from "./components/pages/Home";
 import bodyBackground from "./assets/images/body_background.jpg";
 import languageState from "./atoms/language";
 import inviteListState from "./atoms/inviteList";
 import Grid from "@material-ui/core/Grid";
+import { Paper } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   app: {
@@ -18,10 +20,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
     height: "100vh",
-    width: "100hw",
+    minWidth: "100%",
     borderRadius: 8,
+    overflow: "auto",
   },
+
   header: {},
   body: {
     marginBottom: "6vh",
@@ -33,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "12vh",
     },
     margin: "auto",
+    maxWidth: "80hw",
   },
   footer: {},
 }));
@@ -73,29 +79,30 @@ function App() {
   }, [languages, inviteList, fetchInviteList, fetchLanguages]);
 
   return (
-    <Grid
-      container
-      direction="column"
-      justifyContent="space-evenly"
-      alignItems="stretch"
-      className={classes.app}
-    >
-      {isLoading.languageLoaded && isLoading.inviteListLoaded ? (
-        <span>
-          <Grid item className={classes.header}>
-            <Header />
-          </Grid>
-          <Grid item className={classes.body}>
-            <p>body area</p>
-          </Grid>
-          <Grid item className={classes.footer}>
-            <Footer />
-          </Grid>{" "}
-        </span>
-      ) : (
-        ""
-      )}
-    </Grid>
+    <Paper className={classes.app}>
+      <Grid
+        container
+        direction="column"
+        justifyContent="space-evenly"
+        alignItems="stretch"
+      >
+        {isLoading.languageLoaded && isLoading.inviteListLoaded ? (
+          <span>
+            <Grid item className={classes.header}>
+              <Header />
+            </Grid>
+            <Grid item xs={10} className={classes.body}>
+              <HomePage />
+            </Grid>
+            <Grid item className={classes.footer}>
+              <Footer />
+            </Grid>{" "}
+          </span>
+        ) : (
+          ""
+        )}
+      </Grid>
+    </Paper>
   );
 }
 

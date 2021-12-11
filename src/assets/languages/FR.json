@@ -5,5 +5,18 @@
     },
     "FOOTER": {
         "message": "Crée et désigné par Mathias Tanner"
+    },
+    "LOGIN": {
+        "welcome": "Bienvenue",
+        "message": "Tu as reçu le lien pour ce site web soit par Sarah, soit par Mathias. Pour confirmer ton identité, pex tu indiquer ton prénom et ton nom dans le formulaire si dessous",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "submit": "Vérifier",
+        "emptyMessage": "Les champs doivent pas être vides",
+        "wrongMessage": "Tu ne sembles pas être sur la liste. Peux tu vérifier qu'il n'y a pas d'erreur? Si ce n'est pas le cas et que tu as bien reçu le lien, contacte Mathias ou Sarah"
+    },
+    "ABOUT": {
+        "married": "Nous nous marrions"
     }
+
 }
