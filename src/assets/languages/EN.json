@@ -5,5 +5,17 @@
     },
     "FOOTER": {
         "message": "Created and designed by Mathias Tanner"
+    },
+    "LOGIN": {
+        "welcome": "Welcome",
+        "message": "You should have recieved the link to this website by either Sarah or Mathias. To confirm your identiy, please enter your first and last name in the form below",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "submit": "Verify",
+        "emptyMessage": "Fields can't be empty",
+        "wrongMessage": "You don't seem to be on the list. Please check that you haven't made a type. If you have recieved the link for the website but it doesn't work, please contact Sarah or Mathias"
+    },
+    "ABOUT": {
+        "married": "We're getting married"
     }
 }
