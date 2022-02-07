@@ -1,6 +1,6 @@
 import React from "react";
 //import PropTypes from "prop-types";
-import { Avatar, Grid } from "@material-ui/core";
+import { Avatar, Grid, Button } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import { useRecoilValue } from "recoil";
 import { makeStyles } from "@material-ui/core/styles";
@@ -21,12 +21,25 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
   },
   image: {
-    width: theme.spacing(25),
-    height: theme.spacing(25),
+    width: theme.spacing(21),
+    height: theme.spacing(21),
   },
   title: {
     fontFamily: "Dancing Script",
     margin: "auto",
+    textAlign: "center",
+  },
+  subtitle: {
+    margin: "0.75em",
+    fontFamily: "Dancing Script",
+    textAlign: "center",
+  },
+  content: {
+    margin: "0.5em",
+    textAlign: "center",
+  },
+  buttons: {
+    margin: "0.6em",
     textAlign: "center",
   },
 }));
@@ -53,6 +66,77 @@ const About = (props) => {
               ? english.ABOUT.married
               : french.ABOUT.married}
           </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="h4" className={classes.subtitle}>
+            {language.code === "EN" ? english.ABOUT.date : french.ABOUT.date}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="subtitle2" className={classes.content}>
+            {language.code === "EN" ? english.ABOUT.infos : french.ABOUT.infos}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="subtitle2" className={classes.content}>
+            {language.code === "EN" ? english.ABOUT.place : french.ABOUT.place}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="subtitle2" className={classes.content}>
+            {language.code === "EN"
+              ? english.ABOUT.availableInfos
+              : french.ABOUT.availableInfos}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="subtitle2" className={classes.content}>
+            {language.code === "EN"
+              ? english.ABOUT.updates
+              : french.ABOUT.updates}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-evenly"
+            alignItems="stretch"
+            className={classes.buttons}
+          >
+            <Grid item>
+              <Button
+                variant="contained"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={
+                  language.code === "EN"
+                    ? english.ABOUT.formLink
+                    : french.ABOUT.formLink
+                }
+              >
+                {language.code === "EN"
+                  ? english.ABOUT.answerFormLabel
+                  : french.ABOUT.answerFormLabel}
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button
+                variant="contained"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={
+                  language.code === "EN"
+                    ? english.ABOUT.giftListLink
+                    : french.ABOUT.giftListLink
+                }
+              >
+                {language.code === "EN"
+                  ? english.ABOUT.giftListLabel
+                  : french.ABOUT.giftListLabel}
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Paper>
