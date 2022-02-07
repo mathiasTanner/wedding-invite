@@ -8,6 +8,7 @@ import selectedLanguageState from "../../atoms/selectedLanguage";
 import * as english from "../../assets/languages/EN.json";
 import * as french from "../../assets/languages/FR.json";
 import { Grid, Paper, Typography, TextField, Button } from "@material-ui/core";
+import Cookies from "universal-cookie";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "2em",
     textAlign: "center",
   },
+  form: {},
   textfield: {
     backgroundColor: `${theme.palette.secondary.main}`,
     "& .MuiOutlinedInput-root": {
@@ -39,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
     "& label.Mui-focused": {
       color: `#000000`,
     },
+    [theme.breakpoints.down("sm")]: {
+      margin: "5px",
+    },
   },
   button: {
     border: "1px solid",
@@ -47,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: `${theme.palette.primary.light} `,
       color: `${theme.palette.secondary.dark} `,
       borderColor: `${theme.palette.secondary.light} `,
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "5px",
     },
   },
   errorMessage: {
@@ -66,6 +74,7 @@ const Login = (props) => {
   const [formInput, setFormInput] = useState({ first: "", last: "" });
   const [errorHidden, setErrorHidden] = useState(true);
   const [wrongHidden, setWrongHidden] = useState(true);
+  const cookies = new Cookies();
 
   const submitForm = () => {
     console.log(isLogged);
@@ -82,6 +91,7 @@ const Login = (props) => {
           setErrorHidden(true);
           setWrongHidden(true);
           setIslogged(true);
+          cookies.set("isLogged", true, { maxAge: 18000 });
         } else {
           setWrongHidden(false);
         }

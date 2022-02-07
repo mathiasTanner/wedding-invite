@@ -1,7 +1,8 @@
-import React from "react";
+import { React, useEffect } from "react";
 //import PropTypes from "prop-types";
 import { Grid } from "@material-ui/core";
-import { useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
+import Cookies from "universal-cookie";
 import { makeStyles } from "@material-ui/core/styles";
 import isLoggedState from "../../atoms/isLogged";
 import Login from "../visual-components/Login";
@@ -16,7 +17,16 @@ const useStyles = makeStyles((theme) => ({
 
 const HomePage = (props) => {
   const classes = useStyles();
-  const isLogged = useRecoilValue(isLoggedState);
+  const [isLogged, setIslogged] = useRecoilState(isLoggedState);
+
+  const cookies = new Cookies();
+
+  useEffect(() => {
+    if (cookies.get("isLogged") !== undefined) {
+      setIslogged(cookies.get("isLogged"));
+    }
+  });
+
   return (
     <Grid
       container

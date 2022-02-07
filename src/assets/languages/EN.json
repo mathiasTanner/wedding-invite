@@ -16,6 +16,15 @@
         "wrongMessage": "You don't seem to be on the list. Please check that you haven't made a type. If you have recieved the link for the website but it doesn't work, please contact Sarah or Mathias"
     },
     "ABOUT": {
-        "married": "We're getting married"
-    }
+        "married": "We're getting married",
+        "date": "23 July 2022",
+        "infos": "Sarah and I have decided to get married this summer, on Friday 22nd of July 2022. The ceremony itslef will be held privatly with just the direct family, but we would still like to invite family and firends for this occasion. On Saturday 23rd of July we will hold a ceremony with every one. We would be happy if you decided to join us to celebrate this happy event.",
+        "place": "The event will be held at [INSERT_ADDRESS_HERE] and will start at [INSERT_TIME_HERE], if you need to travel to Newcastle, Sarah and I have decided to stay at the Gray Street Hotel, at 2-12 Grey Street NE1 6EE Newcastle upon Tyne.",
+        "availableInfos": "There are still a lot of stuff we need to plan and sort out. With Sarah writing her PhD Thesis and me starting a new job, we've both been kept quite busy in past few weeks. Nonetheless, we wanted to give the essential informations as soon as possible. For now you have the date, the location, an answer form to tell us if you intend on attending, and a link to our wedding-gift list 😜.",
+        "updates": "As soon as we finish organizing something, we'll post the infos here on this website, so please do come regularly to be kept in the loop. We also mean to use it as a platform to share photos and memories of the event, so it'll will saty online for quite some time.",
+        "formLink": "https://forms.gle/JC59CWCehorVtCMX6",
+        "answerFormLabel": "Answer form",
+        "giftListLink": "https://www.amazon.de/wedding/sarah-barrass-mathias-tanner-newcastle-july-2022/registry/3U2MEM1G790S2",
+        "giftListLabel": "Wedding gifts list"
+    }   
 }
