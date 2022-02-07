@@ -12,6 +12,9 @@ import About from "../visual-components/About";
 const useStyles = makeStyles((theme) => ({
   element: {
     margin: "2em",
+    [theme.breakpoints.down("sm")]: {
+      margin: "1em",
+    },
   },
 }));
 
