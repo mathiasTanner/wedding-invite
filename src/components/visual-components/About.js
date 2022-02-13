@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   buttons: {
-    margin: "0.6em",
+    margin: "1em",
     textAlign: "center",
   },
 }));
@@ -83,10 +83,48 @@ const About = (props) => {
           </Typography>
         </Grid>
         <Grid item>
+          <Typography
+            variant="button"
+            component="div"
+            className={classes.content}
+          >
+            {language.code === "EN"
+              ? english.ABOUT.addressFirstLine
+              : french.ABOUT.addressFirstLine}
+          </Typography>
+          <Typography
+            variant="button"
+            component="div"
+            className={classes.content}
+          >
+            {language.code === "EN"
+              ? english.ABOUT.addressSecondLine
+              : french.ABOUT.addressSecondLine}
+          </Typography>
+          <Typography
+            variant="button"
+            component="div"
+            className={classes.content}
+          >
+            {language.code === "EN"
+              ? english.ABOUT.addressThirdLine
+              : french.ABOUT.addressThirdLine}
+          </Typography>
+          <Typography
+            variant="button"
+            component="div"
+            className={classes.content}
+          >
+            {language.code === "EN"
+              ? english.ABOUT.addressFourthLine
+              : french.ABOUT.addressFourthLine}
+          </Typography>
+        </Grid>
+        <Grid item>
           <Typography variant="subtitle2" className={classes.content}>
             {language.code === "EN"
-              ? english.ABOUT.availableInfos
-              : french.ABOUT.availableInfos}
+              ? english.ABOUT.answerText
+              : french.ABOUT.answerText}
           </Typography>
         </Grid>
         <Grid item>
