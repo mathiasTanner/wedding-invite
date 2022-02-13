@@ -91,7 +91,7 @@ const Login = (props) => {
           setErrorHidden(true);
           setWrongHidden(true);
           setIslogged(true);
-          cookies.set("isLogged", true, { maxAge: 18000 });
+          cookies.set("isLogged", true, { maxAge: 3600 });
         } else {
           setWrongHidden(false);
         }
