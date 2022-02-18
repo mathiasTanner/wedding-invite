@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import isLoggedState from "../../atoms/isLogged";
 import Login from "../visual-components/Login";
 import About from "../visual-components/About";
+import Location from "../visual-components/Location";
 //import Placeholder from "../visual-components/Placeholder";
 
 const useStyles = makeStyles((theme) => ({
@@ -50,7 +51,7 @@ const HomePage = (props) => {
             <About />
           </Grid>
           <Grid item className={classes.element}>
-            {/*<Placeholder />*/}
+            <Location />
           </Grid>
           <Grid item className={classes.element}>
             {/*<Placeholder />*/}

@@ -12,6 +12,7 @@ import languageState from "./atoms/language";
 import inviteListState from "./atoms/inviteList";
 import Grid from "@material-ui/core/Grid";
 import { Paper } from "@material-ui/core";
+import Loading from "./components/visual-components/Loading";
 
 const useStyles = makeStyles((theme) => ({
   app: {
@@ -30,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
   header: {},
   body: {
     marginBottom: "6vh",
+    [theme.breakpoints.up("sm")]: {
+      height: "100vh",
+    },
     [theme.breakpoints.up("xs")]: {
       marginTop: "9vh",
     },
@@ -99,7 +103,7 @@ function App() {
             </Grid>{" "}
           </span>
         ) : (
-          ""
+          <Loading />
         )}
       </Grid>
     </Paper>
