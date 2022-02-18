@@ -32,6 +32,7 @@
         "giftListLabel": "Liste de cadeaux de marriage"
     },
     "LOCATION": {
-        "title": "Localisation"
+        "title": "Localisation",
+        "button": "Ouvrir avec google maps"
     }     
 }

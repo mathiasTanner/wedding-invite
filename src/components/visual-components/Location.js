@@ -108,7 +108,9 @@ const Location = (props) => {
                     color="secondary"
                     size="small"
                   >
-                    Open in google maps
+                    {language.code === "EN"
+                      ? english.LOCATION.button
+                      : french.LOCATION.button}
                   </Button>
                 </Popup>
               </Marker>
