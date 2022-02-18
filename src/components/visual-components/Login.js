@@ -83,17 +83,21 @@ const Login = (props) => {
       setWrongHidden(true);
     } else {
       setErrorHidden(true);
-      for (let invited of inviteList) {
-        if (
-          invited.first_name.toUpperCase() === formInput.first.toUpperCase() &&
-          invited.last_name.toUpperCase() === formInput.last.toUpperCase()
-        ) {
-          setErrorHidden(true);
-          setWrongHidden(true);
-          setIslogged(true);
-          cookies.set("isLogged", true, { maxAge: 3600 });
-        } else {
-          setWrongHidden(false);
+      if (inviteList[0].first_name !== undefined) {
+        for (let invited of inviteList) {
+          let firstName = invited.first_name || "";
+          let lastName = invited.last_name || "";
+          if (
+            firstName.toUpperCase() === formInput.first.toUpperCase() &&
+            lastName.toUpperCase() === formInput.last.toUpperCase()
+          ) {
+            setErrorHidden(true);
+            setWrongHidden(true);
+            setIslogged(true);
+            cookies.set("isLogged", true, { maxAge: 3600 });
+          } else {
+            setWrongHidden(false);
+          }
         }
       }
     }

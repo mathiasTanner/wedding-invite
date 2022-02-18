@@ -30,5 +30,8 @@
         "answerFormLabel": "Formulaire de réponse",
         "giftListLink": "https://www.amazon.de/wedding/sarah-barrass-mathias-tanner-newcastle-july-2022/registry/3U2MEM1G790S2",
         "giftListLabel": "Liste de cadeaux de marriage"
-    }  
+    },
+    "LOCATION": {
+        "title": "Localisation"
+    }     
 }
