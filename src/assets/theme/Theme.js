@@ -15,6 +15,9 @@ const Theme = createTheme({
       contrastText: "#000000",
     },
   },
+  typography: {
+    fontSize: 18,
+  },
   overrides: {
     MuiButton: {
       contained: {

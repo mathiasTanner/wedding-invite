@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useRef } from "react";
 //import PropTypes from "prop-types";
 import { Grid } from "@material-ui/core";
 import { useRecoilState } from "recoil";
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 const HomePage = (props) => {
   const classes = useStyles();
   const [isLogged, setIslogged] = useRecoilState(isLoggedState);
+  const myRef = useRef(null);
 
   const cookies = new Cookies();
 
@@ -30,6 +31,8 @@ const HomePage = (props) => {
       setIslogged(cookies.get("isLogged"));
     }
   });
+
+  const executeScroll = () => myRef.current.scrollIntoView();
 
   return (
     <Grid
@@ -48,10 +51,10 @@ const HomePage = (props) => {
       {isLogged ? (
         <span>
           <Grid item className={classes.element}>
-            <About />
+            <About scroll={executeScroll} />
           </Grid>
           <Grid item className={classes.element}>
-            <Location />
+            <Location customRef={myRef} />
           </Grid>
           <Grid item className={classes.element}>
             {/*<Placeholder />*/}
