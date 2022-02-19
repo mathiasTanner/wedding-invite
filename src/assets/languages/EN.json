@@ -18,14 +18,14 @@
     "ABOUT": {
         "married": "We're getting married",
         "date": "Invitation to wedding reception – Saturday 23rd July 2022",
-        "infos": "We are getting married this summer, on Friday 22nd of July 2022. The ceremony itself will be small with only direct family, but we will have a larger wedding reception with family and friends on Saturday 23rd of July. We hope you can attend and celebrate with us.",
+        "infos": "We are getting married this summer, on Friday 22nd July 2022. The ceremony itself will be small with only direct family, but we will have a larger wedding reception with family and friends on Saturday 23rd July. We hope you can attend and celebrate with us.",
         "place": "The wedding reception will be held at Whitley Bay ice rink and will start at 16.00.",
         "addressFirstLine": "Whitley Bay ice rink",
         "addressSecondLine": "Hillheads Rd,",
         "addressThirdLine": "Whitley Bay,",
         "addressFourthLine": "NE25 8HP",
         "answerText": "Please click on the button below to RSVP and send your song requests.",
-        "updates": "We will post more information here closer to the date, so please check back later. We will also use the website as a platform to share photos and memories of the event, so it'll will stay online for quite some time.",
+        "updates": "We will post more information here closer to the date, so please check back later. We will also use the website as a platform to share photos and memories of the event, so it will will stay online for quite some time.",
         "formLink": "https://docs.google.com/forms/d/e/1FAIpQLSeuHs2sYAoe-rDqe_xOovd_tj0H2wr-jY6eDBjVfJFFKkhOnQ/viewform?usp=sf_link",
         "answerFormLabel": "RSVP",
         "giftListLink": "https://www.amazon.de/wedding/sarah-barrass-mathias-tanner-newcastle-july-2022/registry/3U2MEM1G790S2",
@@ -33,6 +33,8 @@
     },
     "LOCATION": {
         "title": "Location",
-        "button": "Open in google maps"
+        "button": "Open in google maps",
+        "address": "Whitley Bay Ice Rink, Hillheads RD, Whitley Bay, NE25 8HP",
+        "directions": "Directions from central station"
     }   
 }

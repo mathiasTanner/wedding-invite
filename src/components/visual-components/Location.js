@@ -33,25 +33,29 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     minHeight: "100%",
     [theme.breakpoints.up("xs")]: {
-      width: "200px",
+      width: "90%",
       height: "100px",
     },
     [theme.breakpoints.up("sm")]: {
-      width: "400px",
+      width: "90%",
       height: "200px",
     },
     [theme.breakpoints.up("md")]: {
-      width: "600px",
+      width: "90%",
       height: "300px",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "800px",
+      width: "90%",
       height: "400px",
     },
     [theme.breakpoints.up("xl")]: {
-      width: "1000px",
+      width: "90%",
       height: "500px",
     },
+  },
+  content: {
+    margin: "0.5em",
+    textAlign: "center",
   },
 }));
 
@@ -76,6 +80,25 @@ const Location = (props) => {
           </Typography>
         </Grid>
         <Grid item>
+          <Typography variant="subtitle2" className={classes.content}>
+            {language.code === "EN"
+              ? english.LOCATION.address
+              : french.LOCATION.address}
+          </Typography>
+        </Grid>
+        <Grid item className={classes.content}>
+          <Button
+            variant="contained"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.google.com/maps/dir/Central+Station,+Newcastle+upon+Tyne,+UK/Whitley+Bay+Ice+Rink,+Hillheads+Rd,+Whitley+Bay+NE25+8HP,+United+Kingdom/@55.0064147,-1.5702453,13z/data=!4m14!4m13!1m5!1m1!1s0x487e70b42718ffe9:0x5ebeb0f8a80300e4!2m2!1d-1.6145693!2d54.9692225!1m5!1m1!1s0x487e6e813afe5f3b:0xb8cf985d8fb732fc!2m2!1d-1.4552111!2d55.0360903!3e3?hl=en"
+          >
+            {language.code === "EN"
+              ? english.LOCATION.directions
+              : french.LOCATION.directions}
+          </Button>
+        </Grid>
+        <Grid item ref={props.customRef}>
           <div className={classes.map}>
             <MapContainer
               center={iceRink}

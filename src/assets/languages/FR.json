@@ -18,13 +18,13 @@
     "ABOUT": {
         "married": "Nous nous marrions",
         "date": "Invitation à la réception de marriage - Samedi 23 Juillet 2022",
-        "infos": "Nous nous marrion cet été, le vendredi 22 Juillet 2022. La cérémonie elle-même sera restreinte avec uniquement la famille directe, mais nous aurons une réception plus large pour la famille étendue et les amis le samedi 23 juillet 2022. Nous espérons que vous serez présent afin de célébrer avec nous.",
+        "infos": "Nous nous marrions cet été, le vendredi 22 Juillet 2022. La cérémonie elle-même sera restreinte avec uniquement la famille directe, mais nous aurons une réception plus large pour la famille étendue et les amis le samedi 23 juillet 2022. Nous espérons que vous serez présents afin de célébrer avec nous.",
         "place": "La réception aura lieu à Whitley Bay ice rink, à Newcastle Upon Tyne au Royaume-Uni et commencera à 16:00.",
         "addressFirstLine": "Whitley Bay ice rink",
         "addressSecondLine": "Hillheads Rd,",
         "addressThirdLine": "Whitley Bay,",
         "addressFourthLine": "NE25 8HP",
-        "answerText": "Veuillez sur le boutton ci-dessous afin de répondre à l'invitation.",
+        "answerText": "Veuillez cliquer sur le boutton ci-dessous afin de répondre à l'invitation.",
         "updates": "Nous allons poster plus d'informations au fur et à mesure que nous approcherons de l'évènement, revenez donc consulter ce site régulièrement. Nous allons également l'utiliser comme plateforme afin de partager des photos et souvenirs de l'évènement, il restera donc online pendant un moment.",
         "formLink": "https://docs.google.com/forms/d/e/1FAIpQLSeE_lAvF8fNlcraSGcwJ4WY5JVVtsCqhG99P_izEpRwsLsz0A/viewform?usp=sf_link",
         "answerFormLabel": "Formulaire de réponse",
@@ -33,6 +33,7 @@
     },
     "LOCATION": {
         "title": "Localisation",
-        "button": "Ouvrir avec google maps"
+        "button": "Ouvrir avec google maps",
+        "directions": "Directions depuis la gare centrale"
     }     
 }

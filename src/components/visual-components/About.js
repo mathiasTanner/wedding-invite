@@ -8,6 +8,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import selectedLanguageState from "../../atoms/selectedLanguage";
 import us from "../../assets/images/us.jpg";
 import { Typography } from "@material-ui/core";
+import MapTwoToneIcon from "@mui/icons-material/MapTwoTone";
+import IconButton from "@mui/material/IconButton";
 import * as english from "../../assets/languages/EN.json";
 import * as french from "../../assets/languages/FR.json";
 
@@ -41,6 +43,17 @@ const useStyles = makeStyles((theme) => ({
   buttons: {
     margin: "1em",
     textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      margin: "0",
+    },
+  },
+  buttonCell: {
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "5px",
+    },
+  },
+  icon: {
+    margin: "auto",
   },
 }));
 
@@ -119,6 +132,11 @@ const About = (props) => {
               ? english.ABOUT.addressFourthLine
               : french.ABOUT.addressFourthLine}
           </Typography>
+          <div className={classes.content}>
+            <IconButton aria-label="map" onClick={props.scroll}>
+              <MapTwoToneIcon />
+            </IconButton>
+          </div>
         </Grid>
         <Grid item>
           <Typography variant="subtitle2" className={classes.content}>
@@ -142,7 +160,7 @@ const About = (props) => {
             alignItems="stretch"
             className={classes.buttons}
           >
-            <Grid item>
+            <Grid item className={classes.buttonCell}>
               <Button
                 variant="contained"
                 target="_blank"
@@ -158,7 +176,7 @@ const About = (props) => {
                   : french.ABOUT.answerFormLabel}
               </Button>
             </Grid>
-            <Grid item>
+            <Grid item className={classes.buttonCell}>
               <Button
                 variant="contained"
                 target="_blank"
