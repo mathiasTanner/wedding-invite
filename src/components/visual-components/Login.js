@@ -88,8 +88,8 @@ const Login = (props) => {
           let firstName = invited.first_name || "";
           let lastName = invited.last_name || "";
           if (
-            firstName.toUpperCase() === formInput.first.toUpperCase() &&
-            lastName.toUpperCase() === formInput.last.toUpperCase()
+            firstName.toUpperCase() === formInput.first.toUpperCase().trim() &&
+            lastName.toUpperCase() === formInput.last.toUpperCase().trim()
           ) {
             setErrorHidden(true);
             setWrongHidden(true);
