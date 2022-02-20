@@ -16,20 +16,20 @@
         "wrongMessage": "Tu ne sembles pas être sur la liste. Peux tu vérifier qu'il n'y a pas d'erreur? Si ce n'est pas le cas et que tu as bien reçu le lien, contacte Mathias ou Sarah"
     },
     "ABOUT": {
-        "married": "Nous nous marrions",
-        "date": "Invitation à la réception de marriage - Samedi 23 Juillet 2022",
+        "married": "Nous nous marions",
+        "date": "Invitation à la réception de marriage - samedi 23 juillet 2022",
         "infos": "Nous nous marrions cet été, le vendredi 22 Juillet 2022. La cérémonie elle-même sera restreinte avec uniquement la famille directe, mais nous aurons une réception plus large pour la famille étendue et les amis le samedi 23 juillet 2022. Nous espérons que vous serez présents afin de célébrer avec nous.",
         "place": "La réception aura lieu à Whitley Bay ice rink, à Newcastle Upon Tyne au Royaume-Uni et commencera à 16:00.",
         "addressFirstLine": "Whitley Bay ice rink",
         "addressSecondLine": "Hillheads Rd,",
         "addressThirdLine": "Whitley Bay,",
         "addressFourthLine": "NE25 8HP",
-        "answerText": "Veuillez cliquer sur le boutton ci-dessous afin de répondre à l'invitation.",
+        "answerText": "Veuillez cliquer sur le bouton ci-dessous afin de répondre à l'invitation.",
         "updates": "Nous allons poster plus d'informations au fur et à mesure que nous approcherons de l'évènement, revenez donc consulter ce site régulièrement. Nous allons également l'utiliser comme plateforme afin de partager des photos et souvenirs de l'évènement, il restera donc online pendant un moment.",
         "formLink": "https://docs.google.com/forms/d/e/1FAIpQLSeE_lAvF8fNlcraSGcwJ4WY5JVVtsCqhG99P_izEpRwsLsz0A/viewform?usp=sf_link",
         "answerFormLabel": "Formulaire de réponse",
         "giftListLink": "https://www.amazon.de/wedding/sarah-barrass-mathias-tanner-newcastle-july-2022/registry/3U2MEM1G790S2",
-        "giftListLabel": "Liste de cadeaux de marriage"
+        "giftListLabel": "Liste de cadeaux de mariage"
     },
     "LOCATION": {
         "title": "Localisation",
