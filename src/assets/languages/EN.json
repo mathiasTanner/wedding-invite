@@ -29,7 +29,8 @@
         "formLink": "https://docs.google.com/forms/d/e/1FAIpQLSeuHs2sYAoe-rDqe_xOovd_tj0H2wr-jY6eDBjVfJFFKkhOnQ/viewform?usp=sf_link",
         "answerFormLabel": "RSVP",
         "giftListLink": "https://www.amazon.de/wedding/sarah-barrass-mathias-tanner-newcastle-july-2022/registry/3U2MEM1G790S2",
-        "giftListLabel": "Wedding gifts list"
+        "giftListLabel": "Wedding gifts list",
+        "mapButton": "Map"
     },
     "LOCATION": {
         "title": "Location",

@@ -140,7 +140,9 @@ const About = (props) => {
               onClick={props.scroll}
               className={classes.mapButton}
             >
-              Map
+              {language.code === "EN"
+                ? english.ABOUT.mapButton
+                : french.ABOUT.mapButton}
             </Button>
           </div>
         </Grid>
