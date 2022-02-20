@@ -9,7 +9,6 @@ import selectedLanguageState from "../../atoms/selectedLanguage";
 import us from "../../assets/images/us.jpg";
 import { Typography } from "@material-ui/core";
 import MapTwoToneIcon from "@mui/icons-material/MapTwoTone";
-import IconButton from "@mui/material/IconButton";
 import * as english from "../../assets/languages/EN.json";
 import * as french from "../../assets/languages/FR.json";
 
@@ -54,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     margin: "auto",
+  },
+  mapButton: {
+    textTransform: "unset !important",
   },
 }));
 
@@ -133,9 +135,13 @@ const About = (props) => {
               : french.ABOUT.addressFourthLine}
           </Typography>
           <div className={classes.content}>
-            <IconButton aria-label="map" onClick={props.scroll}>
-              <MapTwoToneIcon />
-            </IconButton>
+            <Button
+              endIcon={<MapTwoToneIcon />}
+              onClick={props.scroll}
+              className={classes.mapButton}
+            >
+              Map
+            </Button>
           </div>
         </Grid>
         <Grid item>
