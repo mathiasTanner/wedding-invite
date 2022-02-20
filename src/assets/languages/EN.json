@@ -8,7 +8,7 @@
     },
     "LOGIN": {
         "welcome": "Welcome",
-        "message": "You should have recieved the link to this website by either Sarah or Mathias. To confirm your identiy, please enter your first and last name in the form below",
+        "message": "You should have received the link to this website by either Sarah or Mathias. To confirm your identiy, please enter your first and last name in the form below",
         "firstName": "First name",
         "lastName": "Last name",
         "submit": "Verify",
@@ -25,7 +25,7 @@
         "addressThirdLine": "Whitley Bay,",
         "addressFourthLine": "NE25 8HP",
         "answerText": "Please click on the button below to RSVP and send your song requests.",
-        "updates": "We will post more information here closer to the date, so please check back later. We will also use the website as a platform to share photos and memories of the event, so it will will stay online for quite some time.",
+        "updates": "We will post more information here closer to the date, so please check back later. We will also use the website as a platform to share photos and memories of the event, so it will stay online for quite some time.",
         "formLink": "https://docs.google.com/forms/d/e/1FAIpQLSeuHs2sYAoe-rDqe_xOovd_tj0H2wr-jY6eDBjVfJFFKkhOnQ/viewform?usp=sf_link",
         "answerFormLabel": "RSVP",
         "giftListLink": "https://www.amazon.de/wedding/sarah-barrass-mathias-tanner-newcastle-july-2022/registry/3U2MEM1G790S2",

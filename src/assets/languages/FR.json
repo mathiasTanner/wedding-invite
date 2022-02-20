@@ -8,7 +8,7 @@
     },
     "LOGIN": {
         "welcome": "Bienvenue",
-        "message": "Tu as reçu le lien pour ce site web soit par Sarah, soit par Mathias. Pour confirmer ton identité, pex tu indiquer ton prénom et ton nom dans le formulaire si dessous",
+        "message": "Tu as reçu le lien pour ce site web soit par Sarah, soit par Mathias. Pour confirmer ton identité, peux tu indiquer ton prénom et ton nom dans le formulaire si dessous",
         "firstName": "Prénom",
         "lastName": "Nom",
         "submit": "Vérifier",
