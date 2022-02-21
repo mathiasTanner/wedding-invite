@@ -8,7 +8,7 @@
     },
     "LOGIN": {
         "welcome": "Bienvenue",
-        "message": "Tu as reçu le lien pour ce site web soit par Sarah, soit par Mathias. Pour confirmer ton identité, peux tu indiquer ton prénom et ton nom dans le formulaire si dessous",
+        "message": "Tu as reçu le lien pour ce site web soit par Sarah, soit par Mathias. Pour confirmer ton identité, peux tu indiquer ton prénom et ton nom dans le formulaire ci-dessous",
         "firstName": "Prénom",
         "lastName": "Nom",
         "submit": "Vérifier",
@@ -17,8 +17,8 @@
     },
     "ABOUT": {
         "married": "Nous nous marions",
-        "date": "Invitation à la réception de marriage - samedi 23 juillet 2022",
-        "infos": "Nous nous marrions cet été, le vendredi 22 Juillet 2022. La cérémonie elle-même sera restreinte avec uniquement la famille directe, mais nous aurons une réception plus large pour la famille étendue et les amis le samedi 23 juillet 2022. Nous espérons que vous serez présents afin de célébrer avec nous.",
+        "date": "Invitation à la réception de mariage - samedi 23 juillet 2022",
+        "infos": "Nous nous marions cet été, le vendredi 22 juillet 2022. La cérémonie elle-même sera restreinte avec uniquement la famille directe, mais nous aurons une réception plus large pour la famille étendue et les amis le samedi 23 juillet 2022. Nous espérons que vous serez présents afin de célébrer avec nous.",
         "place": "La réception aura lieu à Whitley Bay ice rink, à Newcastle Upon Tyne au Royaume-Uni et commencera à 16:00.",
         "addressFirstLine": "Whitley Bay ice rink",
         "addressSecondLine": "Hillheads Rd,",
