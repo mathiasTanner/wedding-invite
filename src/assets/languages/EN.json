@@ -8,7 +8,7 @@
     },
     "LOGIN": {
         "welcome": "Welcome",
-        "message": "You should have received the link to this website by either Sarah or Mathias. To confirm your identiy, please enter your first and last name in the form below",
+        "message": "You should have received the link to this website by either Sarah or Mathias. To confirm your identity, please enter your first and last name in the form below",
         "firstName": "First name",
         "lastName": "Last name",
         "submit": "Verify",
